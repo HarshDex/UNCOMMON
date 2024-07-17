@@ -1,0 +1,214 @@
+*{
+  padding : 0;
+  margin : 0;
+  box-sizing : border-box;
+  font-family: "Karla", sans-serif;
+}
+html,body{
+  scroll-behavior: smooth;
+  height : 100%;
+  width : 100%;
+}
+::-webkit-scrollbar{
+    display : none;
+}
+
+/* .cursor code */
+.cursor{
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    z-index: 15;
+    opacity: 0;
+}
+.cursor img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+}
+/* .cursor code */
+
+
+/* menu starts here */
+.menu{
+    z-index: 17;
+    position : fixed;
+    top: 50%;
+    right: 8%;
+}
+
+.menu-items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    text-align: center;
+    width: 60px;
+    height: 25px;
+    background-color: white;
+    position: absolute;
+    font-size: .5em;
+    font-weight: 600;
+    padding: .6em;
+    cursor: pointer;
+    transition: all ease .4s;
+}
+.menu-items span{
+    font-size: 2em;
+    font-weight: 900;
+    margin-left: 5px;
+}
+.menu-items:hover{
+    scale: 1.1;
+}
+
+/* menu ends here */
+
+/* loader starts here */
+.loader{
+    position: absolute;
+    z-index: 15;
+    height : 100vh;
+    width: 100%;
+    background-color :#121212;
+}
+/* loader ends here */
+
+
+/* Page1 starts here */
+.page1{
+    position : relative;
+    height: 100vh;
+    width: 100%;
+    overflow : hidden;
+    background-color :#121212;    
+}
+.page1-images{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-color : rgb(199, 126, 126);
+    z-index: 5;
+}
+.page1-part1 {
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    background-color: transparent;
+    top: 0;
+    z-index: 7; 
+    overflow: hidden;
+}
+
+.page1-part1 h2 {
+    height: 60%;
+    width: 50%;
+    padding: .3em;
+    font-weight: 400;
+    font-stretch: ultra-condensed;
+    line-height: 1em;
+    font-size: 4vw;
+    position: relative; 
+    z-index: 8; 
+    color: rgb(23, 23, 23);
+
+}
+
+.page1-part1-image {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 6;
+    filter : blur(2px)
+}
+.page1-part1-image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.page1-part2-image {
+    position: absolute;
+    top: -100%;
+    height: 100vh;
+    width: 100%;
+    z-index: 6; 
+}
+
+.page1-part2-image img { 
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.page1-part2 {
+    overflow: hidden;
+    text-align: center;
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    background-color: transparent;
+    bottom: 0;
+    z-index: 7; 
+}
+
+.page1-part2 h1 {
+    position: relative; 
+    z-index: 8;
+    font-weight: 400;
+    letter-spacing: -1vw;
+    font-size: 19vw;
+    backdrop-filter: blur(2px);
+}
+
+.page1-part2 h1 span{
+    display: inline-block;
+    position: sticky;
+    margin : -22px;
+    color: rgb(26, 26, 26);
+}
+#c,#n1,#n2{
+    display: inline-block;
+    transform: scale(-1,1);
+}
+.page1-inside {
+    position: relative;
+    min-height: 100vh;
+    width : 100%;
+    color : white;
+    z-index : 2;
+}
+
+.page1-inside-container1{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    line-height: 12vh;
+}
+.page1-inside-container1 h1{
+    font-size: 4.1em;
+    font-weight: 300;
+    letter-spacing: -5px;
+}
+/* Page1 ends here */
+
+/* page2 starts here */
+.page2{
+    height: 100vh;
+    width: 100%;
+    background-color:rgb(223, 144, 144);
+}
+/* page2 ends here */
+
+/* page3 starts here */
+.page3{
+    height: 100vh;
+    width: 100%;background-color: white;
+}
+/* page3 ends here */

@@ -1,5 +1,12 @@
 gsap.registerPlugin(ScrollTrigger);
 
+document.body.addEventListener("mousemove",(dets)=>{
+    console.log(dets.x,dets.y);
+    gsap.to('.cursor',{
+        x : dets.clientX,
+        y : dets.clientY
+    })
+})
 
 gsap.from('.menu',{
     opacity : 0,
@@ -142,6 +149,32 @@ tl4.from('.page1-inside-container2-image1', {
     width: "20vw",
     height: "40vh",
 });
+
+
+const page1Inside = document.querySelector('.page1-inside-container2-image1');
+page1Inside.addEventListener('mousemove',(dets)=>{
+    gsap.to('.page1-inside-container2-image1-text',{
+        opacity : 1,
+        y : dets.clientY-70,
+    })
+})
+page1Inside.addEventListener('mouseleave',()=>{
+    gsap.to('.page1-inside-container2-image1-text',{
+        opacity : 0,
+    })
+})
+page1Inside.addEventListener('mousemove',()=>{
+    console.log("cursor visible")
+    gsap.to('.cursor',{
+        scale : 1,
+    })
+})
+page1Inside.addEventListener('mouseleave',()=>{
+    console.log("cursor hidden")
+    gsap.to('.cursor',{
+        scale : 0,
+    })
+})
 
 // page1 inside animations ends here
 

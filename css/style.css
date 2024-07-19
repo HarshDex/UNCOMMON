@@ -15,12 +15,13 @@ html,body{
 
 /* .cursor code */
 .cursor{
-    height: 10px;
-    width: 10px;
+    height: 40px;
+    width: 40px;
     position: fixed;
-    z-index: 20;
-    color : orange;
-    mix-blend-mode: difference;
+    z-index: 15;
+    color : rgb(255, 255, 255);
+    /* mix-blend-mode: difference; */
+    transform: scale(0);
 }
 
 /* .cursor code */
@@ -216,15 +217,40 @@ html,body{
     align-items: center;
 }
 .page1-inside-container2-image1{
+    position: relative;
+    display: flex;
+    justify-content: center;
     height: 80vh;
     width: 50vw;
     z-index: 9;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 .page1-inside-container2-image1 img{
     height: 100%;
     width: 100%;
     object-fit: cover;
+}
+
+.page1-inside-container2-image1-text{
+    position: absolute;
+    height: 8vh;
+    width : 130%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    color : rgb(255, 255, 255);
+    padding : 0 1em;
+    opacity: 0;
+}
+.page1-inside-container2-image1-text h1{
+    font-size: 1.2em;
+    font-weight: 300;
+}
+.page1-inside-container2-image1-text h2{
+    font-size: 0.7em;
+    text-transform: uppercase;
+    color: rgb(112, 112, 112);
 }
 
 /* Page1 ends here */
